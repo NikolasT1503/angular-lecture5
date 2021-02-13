@@ -5,13 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './comp3.component.html',
   styleUrls: ['./comp3.component.css']
 })
-export class Comp3Component implements OnInit {
+export class Comp3Component {
   ngIfcondition: boolean = true;
+  items = ['Toyota', 'Mercedes', 'Bmw', 'Audi', 'Volkswagen'];
   
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   toggleCondition(){
     this.ngIfcondition=!this.ngIfcondition;
