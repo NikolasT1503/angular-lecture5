@@ -1,0 +1,23 @@
+<h2>Использование директивы ngSwitch</h2>
+<div [ngSwitch]="count">
+    <ng-template [ngSwitchCase]="1">Номер {{count}}</ng-template>
+    <ng-template [ngSwitchCase]="2">Номер {{count}}</ng-template>
+    <ng-template [ngSwitchCase]="3">Номер {{count}}</ng-template>
+    <ng-template [ngSwitchCase]="4">Номер {{count}}</ng-template>
+    <ng-template [ngSwitchCase]="5">Номер {{count}}</ng-template>
+    <ng-template ngSwitchDefault>Номер не определен</ng-template>
+</div>
+<hr/>
+<button (click)="increment()">Увеличить</button>&nbsp;&nbsp;{{ count }}&nbsp;&nbsp;<button (click)="decrement()">Уменьшить</button>
+<p></p>
+<hr/>
+<div [ngSwitch]="count">
+    <span *ngSwitchCase="1">Номер {{count}}</span>
+    <span *ngSwitchCase="2">Номер {{count}}</span>
+    <span *ngSwitchCase="3">Номер {{count}}</span>
+    <span *ngSwitchCase="4">Номер {{count}}</span>
+    <span *ngSwitchCase="5">Номер {{count}}</span>
+    <span *ngSwitchDefault>Номер не определен</span>
+</div>
+<hr/>
+<button (click)="increment()">Увеличить</button>&nbsp;&nbsp;{{ count }}&nbsp;&nbsp;<button (click)="decrement()">Уменьшить</button>
