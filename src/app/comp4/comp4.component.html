@@ -21,3 +21,10 @@
 </div>
 <hr/>
 <button (click)="increment()">Увеличить</button>&nbsp;&nbsp;{{ count }}&nbsp;&nbsp;<button (click)="decrement()">Уменьшить</button>
+<hr/>
+<h2>Использование ngSwitchCase без binding </h2>
+<div [ngSwitch]="count">
+    <ng-template ngSwitchCase="1">{{count * 10}}</ng-template>
+    <ng-template ngSwitchCase="2">{{count * 100}}</ng-template>
+    <ng-template ngSwitchDefault>{{count * 1000}}</ng-template>
+</div>
