@@ -1,0 +1,20 @@
+<p>Без ng-template</p>
+<hr/>
+<p style="font-style: italic;">Здесь есть контейнер, только не отображается без ngIf</p>
+<ng-template><p>ng-template без ngIf</p></ng-template>
+<hr/>
+<ng-template [ngIf]="true"><p>С ng-template с ngIf</p></ng-template>
+<hr/>
+<p *ngIf="true">Без ng-template с ngIf</p>
+<hr/>
+<button (click)="toggleCondition()">toggle</button>
+<p *ngIf="ngIfcondition">ngIf с toggleCondition</p>
+<hr/>
+<p *ngIf="ngIfcondition then p6; else p7">Условие в зависимости от меток</p>
+<ng-template #p6 ><p>Параграф 6</p></ng-template>
+<ng-template #p7 ><p>Параграф 7</p></ng-template>
+<button (click)="toggleCondition()">toggle p6 p7</button>
+<hr/>
+<p *ngIf="ngIfcondition then p8">Условие p8</p>
+<ng-template #p8 ><p>Параграф 8</p></ng-template>
+<button (click)="toggleCondition()">toggle p8</button>
